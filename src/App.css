@@ -8,7 +8,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #fff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -29,4 +29,43 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.form_container{
+  width: 300px;
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 0 4px 36px #ccc;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.input-group input{
+  width: 100%;
+  padding: 0 0 10px 0;
+  border: none;
+  border-bottom: 2px solid #e0e0e0;
+  background-color: transparent;
+  outline: none;
+  transition: 0.3s;
+}
+button{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: aliceblue;
+  background-color: #53caee;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.input-group{
+  margin-bottom: 25px;
+}
+
+h4{
+  color: #111111;
+  margin: 0 0 20px 0;
 }
