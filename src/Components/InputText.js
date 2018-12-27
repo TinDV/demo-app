@@ -21,9 +21,8 @@ class InputText extends Component {
   checkValidForm() {
     const regEmail = /[a-z]+[A-Z]+[1-9]/;
     let name = this.state.text;
-    console.log(name);
     if( regEmail.test(name)) {
-      alert('Succeed')
+      alert('Login Succeed')
     } else {
       alert('Login fail, please try again !')
     }
