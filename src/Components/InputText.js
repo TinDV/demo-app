@@ -6,8 +6,8 @@ class InputText extends Component {
     this.state = {
       text: '',
       formError: { text: '' },
-      textValid: false,
-      formValid: false,
+      // textValid: false,
+      // formValid: false,
     };
     this.handleUserInput = this.handleUserInput.bind(this);
     this.checkValidForm = this.checkValidForm.bind(this);
@@ -19,19 +19,23 @@ class InputText extends Component {
   }
 
   checkValidForm() {
-    const regEmail = /[a-z]+[A-Z]+[1-9]/;
+    const regex = /[a-z]+[A-Z]+[1-9]/;
     let name = this.state.text;
-    if( regEmail.test(name)) {
-      alert('Login Succeed')
-    } else {
-      alert('Login fail, please try again !')
+    if( name == '') {
+      alert('You need to enter characters');
+    }
+    else if( regex.test(name) ) {
+      window.location.href = '/home-page';
+    }
+    else {
+      alert('Login fail, please try again !');
     }
   }
 
   render() {
     return (
      <div className="form_container">
-        <h4>Login</h4>
+        <h4>Username</h4>
         <div className="input-group">
           <input id="inputText" type="text" className="form-control" name="text" placeholder="Input characters" required 
           value={this.state.text} onChange={this.handleUserInput}/>
