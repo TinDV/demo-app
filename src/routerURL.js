@@ -10,7 +10,7 @@ class routerURL extends Component {
         <Router>
           <div>
             <Route path = "/user-name" component={InputText} />
-            <Route path = "/home-page" component={HomePage} />
+            <Route path = "/home-page/:userName" component={HomePage} />
           </div>
         </Router>
       </div>

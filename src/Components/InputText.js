@@ -6,8 +6,6 @@ class InputText extends Component {
     this.state = {
       text: '',
       formError: { text: '' },
-      // textValid: false,
-      // formValid: false,
     };
     this.handleUserInput = this.handleUserInput.bind(this);
     this.checkValidForm = this.checkValidForm.bind(this);
@@ -25,7 +23,7 @@ class InputText extends Component {
       alert('You need to enter characters');
     }
     else if( regex.test(name) ) {
-      window.location.href = '/home-page';
+      this.props.history.push(`/home-page/${name}`);
     }
     else {
       alert('Login fail, please try again !');
@@ -37,7 +35,7 @@ class InputText extends Component {
      <div className="form_container">
         <h4>Username</h4>
         <div className="input-group">
-          <input id="inputText" type="text" className="form-control" name="text" placeholder="Input characters" required 
+          <input id="inputText" type="text" className="form-control" name="text" placeholder="Input characters" required
           value={this.state.text} onChange={this.handleUserInput}/>
         </div>
         <button type="button" onClick={this.checkValidForm}>Login</button>
