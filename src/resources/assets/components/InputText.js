@@ -17,7 +17,7 @@ class InputText extends Component {
   }
 
   checkValidForm() {
-    const regex = /[a-z][A-Z1-9_]/;
+    const regex = /^\w+$/;
     let name = this.state.text;
     if( name == '') {
       alert('You need to enter characters');

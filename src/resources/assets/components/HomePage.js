@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Data from '../Json/Status';
+import Data from '../json/Status';
 class HomePage extends Component {
   constructor(props) {
     super(props);
@@ -8,13 +8,6 @@ class HomePage extends Component {
     }
   }
   render() {
-    function showUserName ({ macth }) {
-      return (
-        <div>
-          <h3>Hello { this.state.userName }</h3>
-        </div>
-      );
-    }
     return (
       <div className="HomePage">
         <h3>Hello { this.state.userName }</h3>
