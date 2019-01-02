@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Data from '../json/Status';
+import Tweet from './Tweet';
 class HomePage extends Component {
   constructor(props) {
     super(props);
@@ -11,17 +11,10 @@ class HomePage extends Component {
     return (
       <div className="HomePage">
         <h3>Hello { this.state.userName }</h3>
-        <ul id="listItem">
-        {
-          Data.map(function(item, i){
-            return <li key={i}>{item.status.content}</li>
-          })
-        }
-        </ul>
+        <Tweet />
       </div>
     );
   }
-
 }
 
 export default HomePage;

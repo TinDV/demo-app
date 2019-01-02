@@ -16,10 +16,10 @@ class InputText extends Component {
     this.setState({text: name});
   }
 
-  checkValidForm() {
+  checkValidForm = () => {
     const regex = /^\w+$/;
     let name = this.state.text;
-    if( name == '') {
+    if( name === '') {
       alert('You need to enter characters');
     }
     else if( regex.test(name) ) {
@@ -38,7 +38,7 @@ class InputText extends Component {
           <input id="inputText" type="text" className="form-control" name="text" placeholder="Input characters" required
           value={this.state.text} onChange={this.handleUserInput}/>
         </div>
-        <button type="button" onClick={this.checkValidForm}>Login</button>
+        <button type="button" onClick={ this.checkValidForm } >Login</button>
      </div>
     );
   }
