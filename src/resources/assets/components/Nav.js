@@ -6,8 +6,8 @@ class Nav extends Component {
     return (
       // <div className="hello">Hi ! <Link to="/user-name">Click here</Link></div>
       <div id="menu">
+        <div className="btn"><Link to="/">Home</Link></div>
         <div className="btn"><Link to="/user-name">User</Link></div>
-        <div className="btn"><Link to="/about">About</Link></div>
         <div className="btn"><Link to="/contact">Contact</Link></div>
       </div>
     );
