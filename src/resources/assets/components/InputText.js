@@ -8,8 +8,8 @@ class InputText extends Component {
       text: '',
       isRedirect: false
     };
-    this.handleUserInput = this.handleUserInput.bind(this);
-    this.checkValidForm = this.checkValidForm.bind(this);
+    // this.handleUserInput = this.handleUserInput.bind(this);
+    // this.checkValidForm = this.checkValidForm.bind(this);
   }
 
   handleUserInput = (e) => {
@@ -24,7 +24,6 @@ class InputText extends Component {
       alert('You need to enter characters');
     }
     else if( regex.test(name) ) {
-      // this.props.history.push(`/home-page/${name}`);
       this.setState({ isRedirect: true });
     }
     else {
