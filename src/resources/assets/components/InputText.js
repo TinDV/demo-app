@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import { Redirect } from "react-router-dom";
 
 class InputText extends Component {
   constructor (props) {
     super (props);
     this.state = {
       text: '',
-      formError: { text: '' },
+      isRedirect: false
     };
     this.handleUserInput = this.handleUserInput.bind(this);
     this.checkValidForm = this.checkValidForm.bind(this);
@@ -23,7 +24,8 @@ class InputText extends Component {
       alert('You need to enter characters');
     }
     else if( regex.test(name) ) {
-      this.props.history.push(`/home-page/${name}`);
+      // this.props.history.push(`/home-page/${name}`);
+      this.setState({ isRedirect: true });
     }
     else {
       alert('Login fail, please try again !');
@@ -31,6 +33,11 @@ class InputText extends Component {
   }
 
   render() {
+    // let { from } = this.props.location.state || { from: { pathname: "/" } };
+    // const { redirectToReferrer } = this.state;
+
+    if (this.state.isRedirect) return <Redirect push to={`/home-page/${this.state.text}`} />;
+    
     return (
      <div className="form_container">
         <h4>Username</h4>
