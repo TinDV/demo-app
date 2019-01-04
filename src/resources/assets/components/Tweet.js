@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import LiItem from './LiItem';
+
+const LiItem = props => <li><img src={props.name.avatar} alt="Avatar" />{props.name.name}</li>
 
 class Tweet extends Component {
 
@@ -9,7 +10,7 @@ class Tweet extends Component {
       posts: [],
     };
   }
-
+ 
   componentDidMount() {
     fetch('https://5c2c6216ad36d90014f342b0.mockapi.io/api/v1/apiv1')
     .then(results => results.json())
