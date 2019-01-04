@@ -8,8 +8,7 @@ class InputText extends Component {
       text: '',
       isRedirect: false
     };
-    // this.handleUserInput = this.handleUserInput.bind(this);
-    // this.checkValidForm = this.checkValidForm.bind(this);
+    
   }
 
   handleUserInput = (e) => {
@@ -32,8 +31,6 @@ class InputText extends Component {
   }
 
   render() {
-    // let { from } = this.props.location.state || { from: { pathname: "/" } };
-    // const { redirectToReferrer } = this.state;
 
     if (this.state.isRedirect) return <Redirect push to={`/home-page/${this.state.text}`} />;
     

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import LiItem from './LiItem';
+
+const LiItem = props => <li><img src={props.name.avatar} alt="Avatar" />{props.name.name}</li>
 
 class Tweet extends Component {
 
